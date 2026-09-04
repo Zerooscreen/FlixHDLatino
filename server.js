@@ -9,7 +9,7 @@ const {
 const app = express();
 const PORT = process.env.PORT || 3000;
 const TMDB_API_KEY = process.env.TMDB_API_KEY || 'YOUR_TMDB_API_KEY';
-const SITE_URL = process.env.SITE_URL || 'https://cinebox-espana.up.railway.app';
+const SITE_URL = process.env.SITE_URL || 'https://flixhdlatino.up.railway.app';
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
@@ -310,7 +310,7 @@ app.get('/watch/:type/:id', async (req, res) => {
     const title = data.title || data.name || 'video';
     const itemSlug = slugify(title);
 
-    const targetUrl = `https://zeromovies4k.net/es/watch/${type}/${id}/${itemSlug}`;
+    const targetUrl = `https://moviegate.bolt.host/es/watch/${type}/${id}/${itemSlug}`;
 
     const bodyHtml = `
       <div style="max-width: 600px; margin: 80px auto; text-align: center; padding: 40px; background: var(--card); border: 1px solid var(--line); border-radius: 12px;">
